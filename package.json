@@ -1,5 +1,5 @@
 {
-  "name": "se-2",
+  "name": "cfx-hh",
   "version": "0.0.1",
   "private": true,
   "workspaces": {
@@ -9,19 +9,19 @@
     ]
   },
   "scripts": {
-    "account": "yarn workspace @se-2/hardhat account",
-    "chain": "yarn workspace @se-2/hardhat chain",
-    "fork": "yarn workspace @se-2/hardhat fork",
-    "deploy": "yarn workspace @se-2/hardhat deploy",
-    "verify": "yarn workspace @se-2/hardhat verify",
-    "hardhat-verify": "yarn workspace @se-2/hardhat hardhat-verify",
-    "compile": "yarn workspace @se-2/hardhat compile",
-    "generate": "yarn workspace @se-2/hardhat generate",
-    "flatten": "yarn workspace @se-2/hardhat flatten",
-    "hardhat:lint": "yarn workspace @se-2/hardhat lint",
-    "hardhat:lint-staged": "yarn workspace @se-2/hardhat lint-staged",
-    "hardhat:format": "yarn workspace @se-2/hardhat format",
-    "hardhat:test": "yarn workspace @se-2/hardhat test",
+    "account": "yarn workspace @cfx-hh/hardhat account",
+    "chain": "yarn workspace @cfx-hh/hardhat chain",
+    "fork": "yarn workspace @cfx-hh/hardhat fork",
+    "deploy": "yarn workspace @cfx-hh/hardhat deploy",
+    "verify": "yarn workspace @cfx-hh/hardhat verify",
+    "hardhat-verify": "yarn workspace @cfx-hh/hardhat hardhat-verify",
+    "compile": "yarn workspace @cfx-hh/hardhat compile",
+    "generate": "yarn workspace @cfx-hh/hardhat generate",
+    "flatten": "yarn workspace @cfx-hh/hardhat flatten",
+    "hardhat:lint": "yarn workspace @cfx-hh/hardhat lint",
+    "hardhat:lint-staged": "yarn workspace @cfx-hh/hardhat lint-staged",
+    "hardhat:format": "yarn workspace @cfx-hh/hardhat format",
+    "hardhat:test": "yarn workspace @cfx-hh/hardhat test",
     "test": "yarn hardhat:test",
     "format": "yarn hardhat:format",
     "postinstall": "husky install",
@@ -29,8 +29,8 @@
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0"
   },
   "engines": {
     "node": ">=18.17.0"
