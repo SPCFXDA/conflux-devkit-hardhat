@@ -78,8 +78,8 @@ ENTRYPOINT ["/bin/bash","-c","devkit start --scan"]
 
 FROM devkit AS devkit-nvm
 USER root
-RUN mkdir /workspaces/nvm
-ENV NVM_DIR /workspaces/nvm
+RUN mkdir /opt/nvm
+ENV NVM_DIR /opt/nvm
 ENV NODE_VERSION v20.16.0
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm use --delete-prefix $NODE_VERSION"
@@ -90,6 +90,6 @@ USER ubuntu
 
 FROM devkit-nvm AS devkit-hardhat
 RUN npm install --global hardhat-shorthand \
-    && echo "\n\n" | hardhat-completion install
+    && echo "\ny\n" | hardhat-completion install
 
 
