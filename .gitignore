@@ -1,28 +1,36 @@
-# dependencies
 node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
 
-# yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+#Hardhat files
+cache
+artifacts
 
-# eslint
-.eslintcache
+ignition/deployments
 
-# misc
-.DS_Store
-
-# IDE
-.vscode
-.idea
-
-# cli
-dist
-
-#openvscode-server
+# Openvscode
 .cache
 .local
 .openvscode-server
+.devcontainer/conflux/devkit/dist/
+.devcontainer/conflux/devkit/node_modules/
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
