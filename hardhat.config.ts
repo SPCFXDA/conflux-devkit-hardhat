@@ -6,6 +6,7 @@ import "@nomicfoundation/hardhat-toolbox-viem"
 const deployer_mnemonic = vars.get("DEPLOYER_MNEMONIC")
 
 const config: HardhatUserConfig = {
+  solidity: "0.8.24",
   defaultNetwork: "hardhat",
   etherscan: {
     apiKey: {
