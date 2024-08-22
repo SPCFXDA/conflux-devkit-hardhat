@@ -90,6 +90,6 @@ USER ubuntu
 
 FROM devkit-nvm AS devkit-hardhat
 RUN npm install --global hardhat-shorthand \
-    && echo "\ny\n" | hardhat-completion install
+    && yes | hardhat-completion install
 
 
