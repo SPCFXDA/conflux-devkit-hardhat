@@ -1,6 +1,6 @@
 # Define the base image for the build, specifying the Node.js version
 ARG BASE_IMAGE=ubuntu:latest
-ARG DEVKIT_VERSION=v0.3.2
+ARG DEVKIT_VERSION=v0.3.4
 FROM spcfxda/devkit-cli:${DEVKIT_VERSION} AS devkit-cli
 FROM ${BASE_IMAGE} AS devkit
 
