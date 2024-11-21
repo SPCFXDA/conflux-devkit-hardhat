@@ -1,6 +1,7 @@
 # Define the base image for the build, specifying the Node.js version
 ARG BASE_IMAGE=ubuntu:latest
 ARG DEVKIT_VERSION=v0.4.1
+ARG MNEMONIC="test test test test test test test test test test test junk"
 FROM spcfxda/devkit-cli:${DEVKIT_VERSION} AS devkit-cli
 FROM ${BASE_IMAGE} AS devkit
 
@@ -50,7 +51,6 @@ USER $USERNAME
 
 RUN printf '%s\n' \
 'if [ -t 0 ] && [ -z "${HARDHAT_VAR_DEPLOYER_MNEMONIC}" ]; then' \
-'    echo HARDHAT_VAR_DEPLOYER_MNEMONIC is not set, enter password to load the mnemonic or ctrl+c to abort' \
 '    HARDHAT_VAR_DEPLOYER_MNEMONIC=$(devkit wallet mnemonic print)' \
 '    if [ $? -eq 0 ] && [ -n "${HARDHAT_VAR_DEPLOYER_MNEMONIC}" ]; then' \
 '        export HARDHAT_VAR_DEPLOYER_MNEMONIC' \
@@ -62,7 +62,7 @@ RUN printf '%s\n' \
 RUN printf '%s\n' \
 '{' \
 '  "type": "plaintext",' \
-'  "keystore": "test test test test test test test test test test test junk"' \
+'  "keystore": '${MNEMONIC} \
 '}' >> /home/${USERNAME}/.devkit.keystore.json
 
 # Set the working directory for the user
