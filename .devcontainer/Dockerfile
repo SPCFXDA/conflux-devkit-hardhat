@@ -62,7 +62,7 @@ RUN printf '%s\n' \
 RUN printf '%s\n' \
 '{' \
 '  "type": "plaintext",' \
-'  "keystore": '${MNEMONIC} \
+'  "keystore": "${MNEMONIC}"' \
 '}' >> /home/${USERNAME}/.devkit.keystore.json
 
 # Set the working directory for the user
